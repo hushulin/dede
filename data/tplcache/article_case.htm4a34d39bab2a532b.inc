@@ -1,0 +1,41 @@
+<?php
+$z[0]=Array("field","",66,85);
+$z[0][4]['name']="title";
+$z[1]=Array("global","",86,112);
+$z[1][4]['name']="cfg_webname";
+$z[2]=Array("field","",153,175);
+$z[2][4]['name']="keywords";
+$z[3]=Array("field","",215,266);
+$z[3][4]['name']="description";
+$z[3][4]['function']="html2text(@me)";
+$z[4]=Array("include","",772,807);
+$z[4][4]['filename']="head.htm";
+$z[5]=Array("channel","\r\n        <li> <a href=\"[field:typeurl/]\"><span>[field:typename/]</span></a> </li>\r\n        ",1252,1511);
+$z[5][4]['type']="son";
+$z[5][4]['currentstyle']="<li class='current'><a href='~typelink~' class='thisclass'><span>~typename~</span></a></li>";
+$z[6]=Array("field","",1669,1697);
+$z[6][4]['name']="picname";
+$z[7]=Array("field","",1797,1816);
+$z[7][4]['name']="title";
+$z[8]=Array("type","\r\n        <p>案例分类：[field:typename/]</p>\r\n        ",1863,1945);
+$z[9]=Array("field","",1973,1991);
+$z[9][4]['name']="kehu";
+$z[10]=Array("field","",2023,2043);
+$z[10][4]['name']="pinpai";
+$z[11]=Array("field","",2075,2096);
+$z[11][4]['name']="chanpin";
+$z[12]=Array("field","",2128,2146);
+$z[12][4]['name']="fuwu";
+$z[13]=Array("field","",2178,2230);
+$z[13][4]['name']="pubdate";
+$z[13][4]['function']="MyDate('Y-m-d',@me)";
+$z[14]=Array("field","",2305,2323);
+$z[14][4]['name']="body";
+$z[15]=Array("prenext","",2379,2404);
+$z[15][4]['get']="pre";
+$z[16]=Array("prenext","",2428,2454);
+$z[16][4]['get']="next";
+$z[17]=Array("include","",2528,2565);
+$z[17][4]['filename']="footer.htm";
+
+?>

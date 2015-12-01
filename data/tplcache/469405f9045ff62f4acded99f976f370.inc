@@ -1,0 +1,1 @@
+<li><img src="[field:picname/]" width="190" height="80" alt=""><span class="hover"></span></li>
