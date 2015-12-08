@@ -68,7 +68,7 @@ if(empty($sql))
     $enddate = isset($enddate) ? trim($enddate) : '';
     if($startdate != '') $starttime = strtotime($startdate);
     else $starttime = 0;
-        
+
     if($enddate != '') $endtime = strtotime($enddate);
     else $endtime = 0;
     $where = ' WHERE main.arcrank>-1 ';
@@ -211,14 +211,14 @@ if(empty($sql))
     {
         $where = str_replace('main.', 'addon.', $where);
         $orderby = str_replace('main.', 'addon.', $orderby);
-        $query = "SELECT addon.*, arctype.* FROM $addontable addon 
+        $query = "SELECT addon.*, arctype.* FROM $addontable addon
         LEFT JOIN #@__arctype arctype ON arctype.id = addon.typeid
         $where $orderby";
     } else {
-        $query = "SELECT main.id AS aid,main.*,main.description AS description1, type.* 
-    FROM $maintable main 
-    LEFT JOIN #@__arctype type ON type.id = main.typeid 
-    LEFT JOIN $addontable addon ON addon.aid = main.id 
+        $query = "SELECT main.id AS aid,main.*,main.description AS description1, type.*
+    FROM $maintable main
+    LEFT JOIN #@__arctype type ON type.id = main.typeid
+    LEFT JOIN $addontable addon ON addon.aid = main.id
     $where  $orderby";
     }
     $sql = $query;
