@@ -9,13 +9,16 @@
 	<div class="container">
 
 
-
-  <div class="form-group row">
-    <div class="col-xs-10">
-      <input type="number" class="form-control"  placeholder="请输入查询的商品编号">
+  <form action="/plus/advancedsearch.php" method="post">
+    <input type="hidden" name="mid" value="6" />
+    <div class="form-group row">
+      <div class="col-xs-10">
+        <input type="text" class="form-control" name="goodsn" value="" placeholder="请输入查询的商品编号" />
+      </div>
+        <button type="submit" class="btn btn-primary col-xs-1">查询</button>
     </div>
-      <button type="button" class="btn btn-primary col-xs-1">查询</button>
-  </div>
+  </form>
+
 
   <div class="panel panel-primary">
   	<div class="panel-heading">
@@ -35,6 +38,9 @@
 
   	</div>
   </div>
+
+
+
   </div>
 	</body>
 </html>
