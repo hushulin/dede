@@ -248,6 +248,8 @@ else
 }
 $dlist->SetTemplate($templatefile);
 $dlist->SetSource($query);
+
+var_dump($query);
 require_once(DEDEINC."/channelunit.class.php");
 
 //获得一个指定档案的链接
