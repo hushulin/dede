@@ -19,7 +19,28 @@
     </div>
   </form>
 
+  <?php if (isset($datalist)): ?>
 
+  {dede:datalist}
+  <?php
+  $fields['stime'] = GetDateTimeMk($fields['senddate']);
+  $fields['arcurl'] = GetArcUrl($fields['aid'],$fields['typeid'],$fields['senddate'],$fields['title'],$fields['ismake'],$fields['arcrank'],$fields['namerule'],$fields['typedir'],$fields['money']);
+  $fields['typeurl'] = GetTypeUrl($fields['typeid'],MfTypedir($fields['typedir']),$fields['isdefault'],$fields['defaultname'],
+        $fields['ispart'],$fields['namerule2'],$fields['moresite'],$fields['siteurl'],$fields['sitepath']);
+  ?>
+      <dl>
+        <dt><a href="{dede:field.arcurl/}" target="_blank">{dede:field.title/}</a></dt>
+        <dd><p>{dede:field.description1/}...</p></dd>
+        <dd>
+          <span><a href="{dede:field.arcurl/}" target="_blank">{dede:field.arcurl/}</a></span>
+          <span>类别: <a href="{dede:field.typeurl/}" target="_blank">{dede:field.typename/}</a></span>
+          <span>点击: {dede:field.click/}</span>
+          <span>日期: {dede:field.stime/}</span>
+        </dd>
+      </dl>
+  {/dede:datalist}
+
+  <?php endif; ?>
   <div class="panel panel-primary">
   	<div class="panel-heading">
   		<h3 class="panel-title">您查询的产品编号：93939939393。以下是查询结果</h3>
