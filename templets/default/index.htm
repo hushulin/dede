@@ -8,7 +8,6 @@
 <meta name="author" content="design by www.dede58.com" />
 <meta name="viewport"content="width=1200, initial-scale=1"/>
 <link href="/skin/css/style.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="/skin/work/css/bootstrap.min.css">
 <script type="text/javascript" src="/skin/js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/skin/js/ainatec.js"></script>
 <!--[if lte IE 6]>
@@ -30,17 +29,13 @@
         "}
         <li ><a href="[field:typeurl/]" title="">[field:typename/]</a></li>
         {/dede:channel}
+        <form action="/plus/advancedsearch.php" method="post">
+            <input type="hidden" name="mid" value="6" />
+            <input type="hidden" class="form-control" name="goodsn" value="_________" placeholder="请输入查询的商品编号" />
+            <li ><a href="javascript:;" type="submit" title="">查询</a></li>
+      </form>
       </ul>
       <div class="navBg">
-        <form action="/plus/advancedsearch.php" method="post">
-    <input type="hidden" name="mid" value="6" />
-    <div class="form-group row">
-      <div class="col-xs-10">
-        <input type="text" class="form-control" name="goodsn" value="" placeholder="请输入查询的商品编号" />
-      </div>
-        <button type="submit" class="btn btn-primary col-xs-1">查询</button>
-    </div>
-  </form>
       </div>
     </div>
     <div class="header_call"> <img src="/skin/images/call.png" class="png" width="183" height="32" alt=""> </div>
@@ -153,7 +148,6 @@ $(function(){
     <div class="blackBg"></div>
   </div>
 </div>
-<form action="/plus/advancedsearch.php" method="post"><input type="hidden" name="mid" value="6" /><input type="hidden" name="dopost" value="search" />唯一编号 : <input type="text" name="goodsn" value="" /><br /><input type="submit" name="submit" value="开始搜索" /></form>
 <div class="in_case">
   <div class="in_caseTitle">
     <ul class="clearfix tabHover"  id="myTab1">
