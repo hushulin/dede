@@ -31,7 +31,7 @@
 if(!empty($fields))
 {
 		echo '<tbody>';
-		echo '<tr><td bgcolor="#eeeeee" width="20%">id</td>';
+		// echo '<tr><td bgcolor="#eeeeee" width="20%">id</td>';
 		echo '<td bgcolor="#eeeeee"><div class="left">'.$fields['id'].'</div><div class="right"><a href="diy.php?action=view&diyid='.$diy->diyid.'&id='.$fields['id'].'" target="_blank">详细...</a> &nbsp;</div></td></tr>';
 		foreach($fieldlist as $field=>$fielddata)
 		{
@@ -43,6 +43,10 @@ if(!empty($fields))
 			else if($fielddata[1]=='addon')
 			{
 				$fields[$field] = "<a href='{$fields[$field]}' target='_blank'><img src='img/addon.gif' border='0' /> 其它附件</a>";
+			}
+			else if($fielddata[1] == 'created_at')
+			{
+				$fields[$field] = date('Y-m-d H:i:s' , $fields[$field]);
 			}
 			else
 			{
@@ -68,10 +72,6 @@ if(!empty($fields))
 			</div>
 		</div>
 	</div>
-</div>
-
-<div class="copyright mceneter">
-Powered by <a href="http://www.dedecms.com" target="_blank">DedeCMS</a> &copy; 2004-2009  <a href="http://www.desdev.cn" target="_blank">DesDev</a> Inc.
 </div>
 
 </body>

@@ -39,6 +39,10 @@ foreach($fieldlist as $field=>$fielddata)
 	{
 			$row[$field] = "<a href='{$row[$field]}' target='_blank'><img src='img/addon.gif' border='0' /> 相关附件</a>";
 	}
+	else if($fielddata[1] == 'created_at')
+	{
+		$fields[$field] = date('Y-m-d H:i:s' , $fields[$field]);
+	}
 	else
 	{
 		if(!in_array($fielddata[1], $allowhtml))
