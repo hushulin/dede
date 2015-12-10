@@ -1,14 +1,31 @@
+<style type="text/css">
+.input-hack{
+    height: 60px;
+    line-height: 60px;
+    display: inline-block;
+    padding: 0 30px;
+    font-size: 14px;
+    color: #fff;
+    background: none;
+    border: none;
+}
+</style>
 <div class="header_w">
   <div class="header">
     <h1 class="logo"><a href="/" title=""><img src="/skin/images/logo.png" class="png" width="283" height="56" alt="{dede:global.cfg_webname/}" style="margin-top:13px;"></a></h1>
     <div class="nav">
       <ul class="clearfix">
         <li class=""><a href="/" title="">网站首页</a></li>
-        {dede:channel type='top' row='5' currentstyle="
+        {dede:channel type='top' row='4' currentstyle="
         <li class='current'><a href='~typelink~' ~rel~><span>~typename~</span></a></li>
         "}
         <li><a href="[field:typeurl/]" title="">[field:typename/]</a></li>
          {/dede:channel}
+         <form action="/plus/advancedsearch.php" method="post">
+            <input type="hidden" name="mid" value="6" />
+            <input type="hidden"  name="goodsn" value="_________" placeholder="请输入查询的商品编号" />
+            <li ><input type="submit" title="" class="input-hack" value="查询编号"></li>
+      </form>
       </ul>
       <div class="navBg"></div>
     </div>
