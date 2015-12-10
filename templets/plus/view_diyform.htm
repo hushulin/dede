@@ -39,7 +39,7 @@ foreach($fieldlist as $field=>$fielddata)
 	{
 			$row[$field] = "<a href='{$row[$field]}' target='_blank'><img src='img/addon.gif' border='0' /> 相关附件</a>";
 	}
-	else if($fielddata[1] == 'created_at')
+	else if($fielddata[0] == '发表时间')
 	{
 		$fields[$field] = date('Y-m-d H:i:s' , $fields[$field]);
 	}
