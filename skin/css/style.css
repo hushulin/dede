@@ -157,7 +157,7 @@ _top:expression(eval(document.documentElement.scrollTop));
 	position:absolute;
 	top:0;
 	left:10px;
-	background-color:#c10f0f;
+	/*background-color:#c10f0f;*/
 }
 .header_call {
 	position:absolute;
