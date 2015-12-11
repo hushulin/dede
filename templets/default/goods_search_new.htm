@@ -16,6 +16,71 @@
     background: none;
     border: none;
 }
+
+html,body {
+            font-family: "Microsoft YaHei","Hiragino Sans GB",arial,tahoma,sans-serif;
+        }
+        .fix {
+            zoom:1;
+        }
+        .fix:after {
+            content:'';
+            display:block;
+            visibility:hidden;
+            clear:both;
+            height:0;
+        }
+        .outer_box {
+            width: 1000px;
+            margin: 70px auto;
+            padding: 45px 0 45px 110px;
+            background: -webkit-linear-gradient(left, #fff, #000);
+            background: -moz-linear-gradient(left, #fff, #000);
+            background: -o-linear-gradient(left, #fff, #000);
+            background: linear-gradient(left, #fff, #000);
+        }
+        .inner_box {
+            box-shadow: -10px 10px 60px #212121;
+        }
+        .inner {
+            float: left;
+        }
+        .left_box {
+            width: 646px;
+            height: 646px;
+            background-color: #262858;
+        }
+        .right_box {
+            width: 354px;
+            height: 646px;
+            padding: 40px 20px 0;
+            color: #fff;
+            border: 4px solid #7c7a7b;
+            border-right: none;
+            background: -webkit-linear-gradient(left, #525058, #4c4c51);
+            background: -moz-linear-gradient(left, #525058, #4c4c51);
+            background: -o-linear-gradient(left, #525058, #4c4c51);
+            background: linear-gradient(left, #525058, #4c4c51);
+            box-sizing: -webkit-border-box;
+            box-sizing: -moz-border-box;
+            box-sizing: -o-border-box;
+            box-sizing: border-box;
+        }
+        .right_box h2 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: normal;
+            margin-bottom: 40px;
+        }
+        .right_box p {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .container .outer_box .img-box{
+            width: inherit;
+            height: inherit;
+        }
+
 </style>
 
 	</head>
@@ -34,7 +99,7 @@
     </div>
   </form>
 
-  {dede:datalist}
+ {dede:datalist}
   <?php
   $fields['stime'] = GetDateTimeMk($fields['senddate']);
   $fields['arcurl'] = GetArcUrl($fields['aid'],$fields['typeid'],$fields['senddate'],$fields['title'],$fields['ismake'],$fields['arcrank'],$fields['namerule'],$fields['typedir'],$fields['money']);
@@ -42,28 +107,28 @@
         $fields['ispart'],$fields['namerule2'],$fields['moresite'],$fields['siteurl'],$fields['sitepath']);
   ?>
 
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title">您查询的产品编号：{dede:field.goodsn/} 以下是查询结果:</h3>
+
+    <div class="container">
+        <div class="outer_box">
+            <div class="inner_box fix">
+                <div class="inner left_box">
+                    <img src="{dede:field.litpic/}" class="img-box">
+                </div>
+                <div class="inner right_box">
+                    <h2>{dede:field.title/}</h2>
+                    <p>1.档案查询编码：<span>{dede:field.goodsn/}</span></p>
+                    <p>2.原木材质名称：<span><a href="{dede:field.arcurl/}" target="_blank">{dede:field.title/}</a></span></p>
+                    <p>3.藏品类别名称：<span><a href="{dede:field.typeurl/}" target="_blank">{dede:field.typename/}</a></span></p>
+                    <p>4.价格:<span class="text-danger">{dede:field.trueprice/}</span></p>
+                    <p>5.点击:<span class="text-danger">{dede:field.click/}</span></p>
+                    <p>6.日期:<span class="text-danger">{dede:field.stime/}</span></p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="panel-body">
-      <!--该产品编号查询无结果，请确认编号是否正确.-->
-      <img src="{dede:field.litpic/}" alt="..." class="img-thumbnail">
-      <p>档案查询编码：<span class="text-danger">{dede:field.goodsn/}</span></p>
-      <p>原木材名称：<span class="text-danger"><a href="{dede:field.arcurl/}" target="_blank">{dede:field.title/}</a></span></p>
-      <p>藏品类别名称：<span class="text-danger"><a href="{dede:field.typeurl/}" target="_blank">{dede:field.typename/}</a></span></p>
-      <p>价格:<span class="text-danger">{dede:field.trueprice/}</span></p>
-      <p>点击:<span class="text-danger">{dede:field.click/}</span></p>
-      <p>日期:<span class="text-danger">{dede:field.stime/}</span></p>
-<!--
-      <h4 class="text-primary">收藏证书</h4>
-      <img src="http://pic14.nipic.com/20110522/7411759_164157418126_2.jpg" alt="..." class="img-thumbnail">
- -->
-    </div>
-  </div>
+
 
   {/dede:datalist}
-
 
   </div>
   </body>
