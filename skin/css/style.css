@@ -816,7 +816,7 @@ filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=
 	color:#fff;
 }
 .page a:hover {
-	background-color:#c10f0f;
+	/*background-color:#c10f0f;*/
 	color:#fff;
 }
 .page span {
@@ -825,7 +825,7 @@ filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=
 	line-height:28px;
 	padding:0 12px;
 	margin:0 2px;
-	background-color:#c10f0f;
+	/*background-color:#c10f0f;*/
 	color:#fff
 }
 .page_choose {
