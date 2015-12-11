@@ -100,6 +100,10 @@ html,body {
   </form>
 
  {dede:datalist}
+
+ <?php if ($fields): ?>
+
+
   <?php
   $fields['stime'] = GetDateTimeMk($fields['senddate']);
   $fields['arcurl'] = GetArcUrl($fields['aid'],$fields['typeid'],$fields['senddate'],$fields['title'],$fields['ismake'],$fields['arcrank'],$fields['namerule'],$fields['typedir'],$fields['money']);
@@ -126,6 +130,17 @@ html,body {
             </div>
         </div>
     </div>
+
+
+    <?php else: ?>
+
+    <div class="container">
+        <div class="outer_box">
+            <h2>没有查询结果!请输入正确的编码</h2>
+        </div>
+    </div>
+
+ <?php endif; ?>
 
 
   {/dede:datalist}
