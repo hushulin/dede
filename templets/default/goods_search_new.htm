@@ -95,13 +95,13 @@ html,body {
       <div class="col-xs-10">
         <input type="text" class="form-control" name="goodsn" value="" placeholder="请输入查询的商品编号" />
       </div>
-        <button type="submit" class="btn btn-primary col-xs-1">查询</button>
+        <button type="submit" class="btn btn-primary col-xs-2">查询</button>
     </div>
   </form>
 
  {dede:datalist}
 
- <?php if ($fields): ?>
+ <?php if ($fields['title'] != ''): ?>
 
 
   <?php
