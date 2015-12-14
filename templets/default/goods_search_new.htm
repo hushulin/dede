@@ -88,6 +88,8 @@ html,body {
 
 	<div class="container" style="padding-top:20px;">
 
+    <p><a href="/" class="btn btn-primary col-xs-2">返回首页</a></p>
+
 
   <form action="/plus/advancedsearch.php" method="post">
     <input type="hidden" name="mid" value="6" />
@@ -95,6 +97,9 @@ html,body {
       <div class="col-xs-10">
         <input type="text" class="form-control" name="goodsn" value="" placeholder="请输入查询的商品编号" />
       </div>
+      <!--[if lte IE 6]>
+        <br/><br/>
+        <![endif]-->
         <button type="submit" class="btn btn-primary col-xs-2">查询</button>
     </div>
   </form>
