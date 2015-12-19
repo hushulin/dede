@@ -47,3 +47,27 @@
       <a href="/a/xinwendongtai/" title="" class="in_newsList_more"><img src="/skin/images/more2.png" class="png" width="64" height="64" alt=""></a> </div>
   </div>
 </div>
+
+<div class="contactbg" id="contact">
+  <div class="contact clearfix">
+    <div class="message">
+      <h3>告诉我们您的需求</h3>
+      <h4>TELL US WHAT YOU NEED</h4>
+      <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+        <input type="hidden" name="action" value="post">
+        <input type="hidden" name="diyid" value="1">
+        <input type="hidden" name="do" value="2">
+        <div class="message_form">
+          <input type="text" name="name" class="message_name" value="请输入您的姓名" onfocus="if (value =='请输入您的姓名'){value =''}" onblur="if (value ==''){value='请输入您的姓名'}">
+          <input type="text" name="qq" class="message_tel" value="请输入您的QQ" onfocus="if (value =='请输入您的QQ'){value =''}" onblur="if (value ==''){value='请输入您的QQ'}">
+          <div class="clear" style="height:20px;"></div>
+          <textarea class="message_content" name="content" onfocus="if (this.innerHTML =='请输入您的留言'){value =''}" onblur="if (this.innerHTML ==''){this.innerHTML='请输入您的留言'}">请输入您的留言</textarea>
+          <input type="hidden" name="dede_fields" value="name,text;qq,text;content,text">
+          <input type="hidden" name="dede_fieldshash" value="539f7a5e9d33c673216e70f2e8db3af4">
+          <div class="clear" style="height:25px;"></div>
+          <input type="submit" value="" class="message_btn png" onmouseover=" this.className='message_btnch'" onmouseout="this.className='message_btn'">
+              <span class="message_about">我们将在1个工作日内回复，资料会保密处理。</span> </div>
+      </form>
+    </div>
+  </div>
+</div>
